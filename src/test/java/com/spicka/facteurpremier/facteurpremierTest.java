@@ -138,8 +138,24 @@ class facteurpremierTest {
     @Test
     void generate_avec_25_devrait_renvoyer_liste_5_5() {
         // GIVEN
-        int nbr = 7;
+        int nbr = 25;
+        expectedResult.add(5);
+        expectedResult.add(5);
+
+        // WHEN
+        actualResult = facteurpremier.generate(nbr);
+
+        // THEN
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
+
+    @Test
+    void generate_avec_1001_devrait_renvoyer_liste_7_11_13() {
+        // GIVEN
+        int nbr = 1001;
         expectedResult.add(7);
+        expectedResult.add(11);
+        expectedResult.add(13);
 
         // WHEN
         actualResult = facteurpremier.generate(nbr);
