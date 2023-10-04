@@ -17,6 +17,10 @@ public class facteurpremier {
                     nbr = nbr / 3;
                     listefacteurpremier.add(3);
                 }
+                else {
+                    listefacteurpremier.add(nbr);
+                    break;
+                }
             }
         }
         return listefacteurpremier;
