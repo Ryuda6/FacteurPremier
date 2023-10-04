@@ -13,8 +13,14 @@ public class facteurpremier {
             if (nbr % 2 == 0) {
                 while (nbr >1)
                 {
-                    nbr = nbr / 2;
-                    listefacteurpremier.add(2);
+                    if (nbr % 2 == 0) {
+                        nbr = nbr / 2;
+                        listefacteurpremier.add(2);
+                    }
+                    else if (nbr % 3 == 0){
+                        nbr = nbr / 3;
+                        listefacteurpremier.add(3);
+                    }
                 }
             }
         }
