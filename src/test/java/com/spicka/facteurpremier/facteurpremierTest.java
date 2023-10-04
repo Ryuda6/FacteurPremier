@@ -97,8 +97,23 @@ class facteurpremierTest {
     @Test
     void generate_avec_8_devrait_renvoyer_liste_2_2_2() {
         // GIVEN
-        int nbr = 6;
+        int nbr = 8;
         expectedResult.add(2);
+        expectedResult.add(2);
+        expectedResult.add(2);
+
+        // WHEN
+        actualResult = facteurpremier.generate(nbr);
+
+        // THEN
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
+
+    @Test
+    void generate_avec_9_devrait_renvoyer_liste_3_3() {
+        // GIVEN
+        int nbr = 9;
+        expectedResult.add(3);
         expectedResult.add(3);
 
         // WHEN
