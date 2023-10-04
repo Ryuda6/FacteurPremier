@@ -135,4 +135,17 @@ class facteurpremierTest {
         assertThat(actualResult).isEqualTo(expectedResult);
     }
 
+    @Test
+    void generate_avec_25_devrait_renvoyer_liste_5_5() {
+        // GIVEN
+        int nbr = 7;
+        expectedResult.add(7);
+
+        // WHEN
+        actualResult = facteurpremier.generate(nbr);
+
+        // THEN
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
+
 }
